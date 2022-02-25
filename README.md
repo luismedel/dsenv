@@ -65,8 +65,6 @@ For example:
 
 ```js
 let myenv = loadEnv ({ path: ".env", fs: { encoding:"utf8", flag:"r" }, env:{}});
-
-console.log (myenv.PATH);
 ```
 
 And, again:
