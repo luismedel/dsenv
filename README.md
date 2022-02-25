@@ -1,6 +1,10 @@
 # dsenv
 
-Dead Simple, no dependency needed, .env support for Node in a single function:
+Dead Simple, no dependency needed, .env support for Node in a **single function**.
+
+Seriously, you don't need **another** dependency for that. Don't overcomplicate your project.
+
+## How?
 
 Say you have the following .env file:
 
@@ -14,7 +18,7 @@ ROOT = /var/www/html
 PATH = $ROOT/awesome
 ```
 
-Copy this code anywhere in your project. That's it.
+Copy this code anywhere in your project. **That's it**.
 
 ```js
 function loadEnv (opts)
@@ -30,10 +34,10 @@ function loadEnv (opts)
 }
 ```
 
-Now call it...
+Now call loadEnv ()...
 
 ```js
-loadEnv ()
+loadEnv ();
 ```
 
 ...and you'll get this in ```process.env```:
