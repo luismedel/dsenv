@@ -65,7 +65,7 @@ For example, reusing the .env above:
 let myenv = loadEnv ({ path: ".env", fs: { encoding:"utf8", flag:"r" }, env:{}});
 ```
 
-And, ```myenv``` will contain:
+```myenv``` will contain:
 
 ```sh
 {
@@ -84,4 +84,4 @@ loadEnv ();                         // Loads default .env
 loadEnv ({ path: ".env.debug" });   // Override with .env.debug
 ```
 
-Now, ```process.env``` will contain all .env and updated .env.debug keys.
+```process.env``` will contain all .env and updated .env.debug keys.
