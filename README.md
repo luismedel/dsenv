@@ -25,7 +25,7 @@ function loadEnv (opts)
 
   return fs.readFileSync (opts?.path || ".env", opts?.fs || { encoding:"utf8", flag:"r" })
            .split (/\n|\r/)
-           .map (s => /^([^=]+)\=(.+)$/.exec (s))
+           .map (s => /^([^=\s]+)\s*\=(.+)$/.exec (s))
            .reduce ((env,m) => { m && (env[m[1].trim ()] = expand (env, m[2])); return env; }, opts?.env || process.env);
 }
 ```
