@@ -55,27 +55,20 @@ loadEnv ()
 
 Use the following options to customize the load:
 
-```
-path: .env file to load.
-fs:   Options for fs.readFileSync (defaults are { encoding:"utf8", flag:"r" })
-env:  Object to append values to. Defaults to process.env, but you can specify any other.
-```
+- ```path```: .env file to load.
+- ```fs```:   Options for fs.readFileSync (defaults are { encoding:"utf8", flag:"r" })
+- ```env```:  Object to append values to. Defaults to process.env, but you can specify any other.
 
-For example:
+For example, reusing the .env above:
 
 ```js
 let myenv = loadEnv ({ path: ".env", fs: { encoding:"utf8", flag:"r" }, env:{}});
 ```
 
-And, again:
+And, ```myenv``` will contain:
 
 ```sh
 {
-  NODE_VERSION: '17.6.0',
-  YARN_VERSION: '1.22.17',
-  SHLVL: '1',
-  HOME: '/root',
-  PWD: '/app',
   NAME: 'Awesome project',
   ROOT: '/var/www/html'
   PATH: '/var/www/html/awesome',
@@ -86,7 +79,7 @@ And, again:
 
 You can load more than one .env file in order to mix values (not recommended) or override some values in testing environments:
 
-```
+```js
 loadEnv ();                         // Loads default .env
 loadEnv ({ path: ".env.debug" });   // Override with .env.debug
 ```
