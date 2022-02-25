@@ -1,6 +1,6 @@
 # dsenv
 
-Dead Simple, no dependency needed, .env support for Node in a **single function**.
+Dead Simple .env support for Node in a **single function**.
 
 Seriously, you don't need **another** dependency for that. Don't overcomplicate your project.
 
