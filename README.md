@@ -34,7 +34,7 @@ function loadEnv (opts)
 }
 ```
 
-Now call loadEnv ()...
+Now call ```loadEnv ()```...
 
 ```js
 loadEnv ();
@@ -60,8 +60,8 @@ loadEnv ();
 Use the following options to customize the load:
 
 - ```path```: .env file to load.
-- ```fs```:   Options for fs.readFileSync (defaults are { encoding:"utf8", flag:"r" })
-- ```env```:  Object to append values to. Defaults to process.env, but you can specify any other.
+- ```fs```:   Options for ```fs.readFileSync``` (defaults are ```{ encoding:"utf8", flag:"r" }```)
+- ```env```:  Object to append values to. Defaults to ```process.env```, but you can specify any other.
 
 For example, reusing the .env above:
 
